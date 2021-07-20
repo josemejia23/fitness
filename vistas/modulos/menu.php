@@ -44,7 +44,7 @@
 
 			</li>
 
-			<li>
+			<li class="treeview">
 
 				<a href="#">
 
@@ -53,7 +53,49 @@
 
 				</a>
 
-			</li>';
+				<ul class="treeview-menu">
+					
+				<li>
+
+					<a href="aerobicos">
+						
+						<i class="fa fa-circle-o"></i>
+						<span>Aeróbicos</span>
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="flexibilidad">
+						
+						<i class="fa fa-circle-o"></i>
+						<span>Flexibilidad</span>
+
+					</a>
+
+				</li>';
+
+			if ($_SESSION["perfil"] == "Administrador") {
+
+				echo '<li>
+
+					<a href="fuerza">
+						
+						<i class="fa fa-circle-o"></i>
+						<span>Fuerza y Resistencia</span>
+
+					</a>
+
+				</li>';
+			}
+
+
+
+			echo '</ul>
+
+		</li>';
 			}
 
 			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor") {
@@ -64,7 +106,11 @@
 
 					<i class="fa fa-users"></i>
 					<span>Usuarios fitness</span>
+					<span class="pull-right-container">
+					
+						<i class="fa fa-angle-left pull-right"></i>
 
+					</span>
 				</a>
 
 			</li>';

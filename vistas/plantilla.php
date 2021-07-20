@@ -151,6 +151,9 @@ CUERPO DOCUMENTO
         $_GET["ruta"] == "editar-cotizacion" ||
         $_GET["ruta"] == "reportes" ||
         $_GET["ruta"] == "signup" ||
+        $_GET["ruta"] == "aerobicos" ||
+        $_GET["ruta"] == "fuerza" ||
+        $_GET["ruta"] == "flexibilidad" ||
         $_GET["ruta"] == "salir"
       ) {
 
