@@ -67,6 +67,7 @@
 
             <label for="exampleFormControlSelect1">Enfermedades</label>
             <select class="form-control" name="enfermedades">
+              <option>0</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -97,7 +98,7 @@
 
           <div class="form-group has-feedback">
 
-            <input type="number" class="form-control" placeholder="Días que practica algún deporte" name="deporte" required>
+            <input type="number" class="form-control" placeholder="Días que practica algún deporte a la semana" name="deporte" required>
             <span class="glyphicon glyphicon glyphicon glyphicon-plus-sign form-control-feedback"></span>
 
           </div>
@@ -115,7 +116,7 @@
 
           <div class="form-group has-feedback">
 
-            <input type="number" class="form-control" placeholder="Número de dosis diarias" name="dosis" required>
+            <input type="number" class="form-control" placeholder="Número de dosis de vacuna contra covid" name="dosis" required>
             <span class="glyphicon glyphicon-baby-formula form-control-feedback"></span>
 
           </div>
