@@ -20,7 +20,21 @@
 			</li>';
 			}
 
+			
 
+			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial") {
+
+				echo '<li class="active">
+
+				<a href="usuariosActualizar">
+
+					<i class="fa fa-user"></i>
+					<span>Actualizar Usuario</span>
+
+				</a>
+
+			</li>';
+			}
 			if ( $_SESSION["perfil"] == "Especial") {
 
 				echo '<li class="active">
