@@ -154,6 +154,9 @@ CUERPO DOCUMENTO
         $_GET["ruta"] == "aerobicos" ||
         $_GET["ruta"] == "fuerza" ||
         $_GET["ruta"] == "flexibilidad" ||
+        $_GET["ruta"] == "loginUser" ||
+        $_GET["ruta"] == "entrenamiento" ||
+        $_GET["ruta"] == "usuariosActualizar" ||
         $_GET["ruta"] == "salir"
       ) {
 

@@ -8,7 +8,7 @@
 
     <p class="login-box-msg">Registro de usuario</p>
 
-    <form method="post">
+    <form role="form" method="post">
 
       <div class="row">
         <div class="col-xs-6">
@@ -42,8 +42,8 @@
           </div>
 
           <div class="form-group has-feedback">
-            <label for="exampleFormControlSelect1">Fecha de Nacimiento</label>
-            <input type="date" class="form-control" placeholder="Fecha de Nacimiento" name="fechaNacimiento" required>
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" placeholder="Fecha de Nacimiento" name="fechaNacimiento" id="fechaNacimiento" required>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
 
           </div>
@@ -66,7 +66,7 @@
           <div class="form-group has-feedback">
 
             <label for="exampleFormControlSelect1">Enfermedades</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" name="enfermedades">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -104,7 +104,7 @@
           <div class="form-group has-feedback">
 
             <label for="exampleFormControlSelect1">Vacunado contra el covid?</label>
-            <select class="form-control" id="covid">
+            <select class="form-control" name="covid">
               <option>Sí</option>
               <option>NO</option>
 
@@ -123,7 +123,7 @@
           <div class="form-group has-feedback">
 
             <label for="exampleFormControlSelect1">Presenta cirugías?</label>
-            <select class="form-control" id="cirugias">
+            <select class="form-control" name="cirugias">
               <option>Sí</option>
               <option>NO</option>
 
@@ -140,7 +140,7 @@
           </div>
 
 
-          
+
 
 
           <div class="form-group has-feedback">
@@ -152,7 +152,7 @@
 
           <div class="form-group has-feedback">
 
-            <input type="password" class="form-control" placeholder="Contraseña" name="contrasena" required>
+            <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
           </div>
@@ -178,6 +178,14 @@
       ?>
 
     </form>
+
+    <?php
+
+    $crearCliente = new ControladorClientes();
+    $crearCliente->ctrCrearCliente();
+
+    ?>
+
 
   </div>
 

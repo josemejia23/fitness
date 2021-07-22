@@ -6,7 +6,7 @@
 
 			<?php
 
-			if ($_SESSION["perfil"] == "Administrador") {
+			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial") {
 
 				echo '<li class="active">
 
@@ -17,9 +17,27 @@
 
 				</a>
 
-			</li>
+			</li>';
+			}
 
-			<li>
+
+			if ( $_SESSION["perfil"] == "Especial") {
+
+				echo '<li class="active">
+
+			<a href="entrenamiento">
+
+				<i class="fa fa-deaf"></i>
+				<span>Entrenamiento</span>
+
+			</a>
+
+		</li>';
+			}
+
+
+			if ($_SESSION["perfil"] == "Administrador") {
+				echo '<li>
 
 				<a href="usuarios">
 
@@ -77,9 +95,9 @@
 
 				</li>';
 
-			if ($_SESSION["perfil"] == "Administrador") {
+				if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial") {
 
-				echo '<li>
+					echo '<li>
 
 					<a href="fuerza">
 						
@@ -89,11 +107,11 @@
 					</a>
 
 				</li>';
-			}
+				}
 
 
 
-			echo '</ul>
+				echo '</ul>
 
 		</li>';
 			}
@@ -158,7 +176,7 @@
 
 					</li>';
 
-				if ($_SESSION["perfil"] == "Administrador") {
+				if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial") {
 
 					echo '<li>
 
@@ -178,7 +196,7 @@
 
 			</li>';
 
-			echo '<li class="treeview">
+				echo '<li class="treeview">
 
 			<a href="#">
 
@@ -218,9 +236,9 @@
 
 				</li>';
 
-			if ($_SESSION["perfil"] == "Administrador") {
+				if ($_SESSION["perfil"] == "Administrador") {
 
-				echo '<li>
+					echo '<li>
 
 					<a href="#">
 						
@@ -230,18 +248,18 @@
 					</a>
 
 				</li>';
-			}
+				}
 
 
 
-			echo '</ul>
+				echo '</ul>
 
 		</li>';
 				echo '</ul>
 
 				</li>';
 			}
-			
+
 			?>
 
 		</ul>

@@ -2,15 +2,15 @@
 
 require_once "conexion.php";
 
-class ModeloClientes{
+class ModeloClientesFitness{
 
 	/*=============================================
 	CREAR CLIENTE
 	=============================================*/
 
-	static public function mdlIngresarCliente($tabla, $datos){
+	static public function mdlIngresarClienteFitness($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, apellido, cedula, email, estatura, peso, enfermedades, sangre, civil, dias_deporte, covid, dosis, cirugias, discapacidad, usuario, contrasena, fecha_nacimiento) VALUES (:nombre, :apellido, :cedula, :email, :estatura, :peso, :enfermedades, :sangre, :civil, :dias_deporte, :covid, :dosis, :cirugias, :discapacidad, :usuario, :contrasena, :fecha_nacimiento)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, apellido, cedula, email, estatura, peso, enfermedades, sangre, civil, dias_deporte, covid, dosis, cirugias, discapacidad, usuario, password, fecha_nacimiento, perfil) VALUES (:nombre, :apellido, :cedula, :email, :estatura, :peso, :enfermedades, :sangre, :civil, :dias_deporte, :covid, :dosis, :cirugias, :discapacidad, :usuario, :password, :fecha_nacimiento, :perfil)");
 
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		$stmt->bindParam(":apellido", $datos["apellido"], PDO::PARAM_STR);
@@ -27,7 +27,8 @@ class ModeloClientes{
 		$stmt->bindParam(":cirugias", $datos["cirugias"], PDO::PARAM_STR);
 		$stmt->bindParam(":discapacidad", $datos["discapacidad"], PDO::PARAM_STR);
 		$stmt->bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
-		$stmt->bindParam(":contrasena", $datos["contrasena"], PDO::PARAM_STR);
+		$stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
+		$stmt->bindParam(":perfil", $datos["perfil"], PDO::PARAM_STR);
 		$stmt->bindParam(":fecha_nacimiento", $datos["fecha_nacimiento"], PDO::PARAM_STR);
 
 		if($stmt->execute()){

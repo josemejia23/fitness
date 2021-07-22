@@ -19,7 +19,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
     
     <h1>
       
-      Administrar usuarios
+     Actualizar Usuario
     
     </h1>
 
@@ -37,15 +37,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
     <div class="box">
 
-      <div class="box-header with-border">
-  
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
-          
-          Agregar usuario
-
-        </button>
-
-      </div>
+    
 
       <div class="box-body">
         
@@ -55,7 +47,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
          
          <tr>
            
-           <th style="width:10px">#</th>
+      
            <th>Nombre</th>
            <th>Usuario</th>
            <th>Foto</th>
@@ -72,22 +64,21 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
         <?php
 
-        $item = null;
-        $valor = null;
+        $tabla = "usuarios";
+        $item = "usuario";
+        $valor = $_SESSION["usuario"];
         
 
-        $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
-
-       foreach ($usuarios as $key => $value){
-         
+        $usuarios = ControladorUsuarios::ctrMostrarUsuarios($tabla, $item, $valor);
+       
           echo ' <tr>
-                  <td>'.($key+1).'</td>
-                  <td>'.$value["nombre"].'</td>
-                  <td>'.$value["usuario"].'</td>';
+                 
+                  <td>'.$_SESSION["nombre"].'</td>
+                  <td>'.$_SESSION["usuario"].'</td>';
 
-                  if($value["foto"] != ""){
+                  if($_SESSION["foto"] != ""){
 
-                    echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="40px"></td>';
+                    echo '<td><img src="'.$_SESSION["foto"].'" class="img-thumbnail" width="40px"></td>';
 
                   }else{
 
@@ -95,33 +86,33 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
                   }
 
-                  echo '<td>'.$value["perfil"].'</td>';
+                  echo '<td>'.$_SESSION["perfil"].'</td>';
 
-                  if($value["estado"] != 0){
+                  if($_SESSION["estado"] != 0){
 
-                    echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
+                    echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$_SESSION["id"].'" estadoUsuario="0">Activado</button></td>';
 
                   }else{
 
-                    echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
+                    echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$_SESSION["id"].'" estadoUsuario="1">Desactivado</button></td>';
 
                   }             
 
-                  echo '<td>'.$value["ultimo_login"].'</td>
+                  echo '<td>'.$_SESSION["ultimo_login"].'</td>
                   <td>
 
                     <div class="btn-group">
                         
-                      <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
+                      <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$_SESSION["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
 
-                      <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fa fa-times"></i></button>
+                      <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$_SESSION["id"].'" fotoUsuario="'.$usuarios["foto"].'" usuario="'.$usuarios["usuario"].'"><i class="fa fa-times"></i></button>
 
                     </div>  
 
                   </td>
 
                 </tr>';
-        }
+        
 
 
         ?> 

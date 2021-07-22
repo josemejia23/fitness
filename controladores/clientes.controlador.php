@@ -1,6 +1,6 @@
 <?php
 
-class ControladorClientes{
+class ControladorClientesFitness{
 
 	/*=============================================
 	CREAR CLIENTES
@@ -8,22 +8,27 @@ class ControladorClientes{
 
 	static public function ctrCrearCliente(){
 
-		if(isset($_POST["nuevoCliente"])){
-
-			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoCliente"]) &&
-			   preg_match('/^[0-9]+$/', $_POST["nuevoDocumentoId"]) &&
-			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["nuevoEmail"]) && 
-			   preg_match('/^[()\-0-9 ]+$/', $_POST["nuevoTelefono"]) && 
-			   preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaDireccion"])){
+		if(isset($_POST["nombre"])){
 
 			   	$tabla = "clientes";
 
-			   	$datos = array("nombre"=>$_POST["nuevoCliente"],
-					           "documento"=>$_POST["nuevoDocumentoId"],
-					           "email"=>$_POST["nuevoEmail"],
-					           "telefono"=>$_POST["nuevoTelefono"],
-					           "direccion"=>$_POST["nuevaDireccion"],
-					           "fecha_nacimiento"=>$_POST["nuevaFechaNacimiento"]);
+			   	$datos = array("nombre"				=>$_POST["nombre"],
+					           "apellido"			=>$_POST["apellido"],
+					           "cedula"				=>$_POST["cedula"],
+					           "email"				=>$_POST["correo"],
+							   "estatura"			=>$_POST["estatura"],
+							   "peso"				=>$_POST["peso"],
+							   "enfermedades"		=>$_POST["enfermedades"],
+							   "sangre"				=>$_POST["sangre"],
+							   "civil"				=>$_POST["civil"],
+							   "dias_deporte"		=>$_POST["deporte"],
+							   "covid"				=>$_POST["covid"],
+							   "dosis"				=>$_POST["dosis"],
+							   "cirugias"			=>$_POST["cirugias"],
+							   "discapacidad"		=>$_POST["discapacidad"],
+							   "usuario"			=>$_POST["usuario"],
+							   "contrasena"			=>$_POST["contrasena"],
+					           "fecha_nacimiento"	=>$_POST["fechaNacimiento"]);
 
 			   	$respuesta = ModeloClientes::mdlIngresarCliente($tabla, $datos);
 
@@ -33,7 +38,7 @@ class ControladorClientes{
 
 					swal({
 						  type: "success",
-						  title: "El cliente ha sido guardado correctamente",
+						  title: "El usuario ha sido guardado correctamente",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){
@@ -48,28 +53,7 @@ class ControladorClientes{
 
 				}
 
-			}else{
-
-				echo'<script>
-
-					swal({
-						  type: "error",
-						  title: "¡El cliente no puede ir vacío o llevar caracteres especiales!",
-						  showConfirmButton: true,
-						  confirmButtonText: "Cerrar"
-						  }).then(function(result){
-							if (result.value) {
-
-							window.location = "clientes";
-
-							}
-						})
-
-			  	</script>';
-
-
-
-			}
+			
 
 		}
 

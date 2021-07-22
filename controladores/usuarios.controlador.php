@@ -28,9 +28,28 @@ class ControladorUsuarios{
 						$_SESSION["iniciarSesion"] = "ok";
 						$_SESSION["id"] = $respuesta["id"];
 						$_SESSION["nombre"] = $respuesta["nombre"];
+						$_SESSION["apellido"] = $respuesta["apellido"];
 						$_SESSION["usuario"] = $respuesta["usuario"];
+						$_SESSION["cedula"] = $respuesta["cedula"];
+						$_SESSION["email"] = $respuesta["email"];
+						$_SESSION["telefono"] = $respuesta["telefono"];
+						$_SESSION["direccion"] = $respuesta["direccion"];
+						$_SESSION["fecha_nacimiento"] = $respuesta["fecha_nacimiento"];
+						$_SESSION["estatura"] = $respuesta["estatura"];
+						$_SESSION["peso"] = $respuesta["peso"];
+						$_SESSION["enfermedades"] = $respuesta["enfermedades"];
+						$_SESSION["sangre"] = $respuesta["sangre"];
+						$_SESSION["civil"] = $respuesta["civil"];
 						$_SESSION["foto"] = $respuesta["foto"];
 						$_SESSION["perfil"] = $respuesta["perfil"];
+						$_SESSION["edad"] = $respuesta["edad"];
+						$_SESSION["dias_deporte"] = $respuesta["dias_deporte"];
+						$_SESSION["covid"] = $respuesta["covid"];
+						$_SESSION["dosis"] = $respuesta["dosis"];
+						$_SESSION["cirugias"] = $respuesta["cirugias"];
+						$_SESSION["discapacidad"] = $respuesta["discapacidad"];
+						$_SESSION["estado"] = $respuesta["estado"];
+						$_SESSION["ultimo_login"] = $respuesta["ultimo_login"];
 
 						/*=============================================
 						REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN
@@ -390,7 +409,7 @@ class ControladorUsuarios{
 						  }).then(function(result) {
 									if (result.value) {
 
-									window.location = "usuarios";
+									window.location = "usuariosActualizar";
 
 									}
 								})
