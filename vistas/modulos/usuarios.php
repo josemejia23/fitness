@@ -373,7 +373,6 @@ MODAL EDITAR USUARIO
 
                   <option value="Especial">Especial</option>
 
-                  <option value="Vendedor">Vendedor</option>
 
                 </select>
 

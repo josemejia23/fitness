@@ -16,6 +16,7 @@ require_once "modelos/clientes.modelo.php";
 require_once "modelos/ventas.modelo.php";
 require_once "modelos/cotizaciones.modelo.php";
 require_once "modelos/clientesFitness.modelo.php";
+require_once "modelos/actividad.modelo.php";
 require_once "extensiones/vendor/autoload.php";
 
 $plantilla = new ControladorPlantilla();

@@ -10,7 +10,7 @@ class ModeloClientesFitness{
 
 	static public function mdlIngresarClienteFitness($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, apellido, cedula, email, estatura, peso, enfermedades, sangre, civil, dias_deporte, covid, dosis, cirugias, discapacidad, usuario, password, fecha_nacimiento, perfil) VALUES (:nombre, :apellido, :cedula, :email, :estatura, :peso, :enfermedades, :sangre, :civil, :dias_deporte, :covid, :dosis, :cirugias, :discapacidad, :usuario, :password, :fecha_nacimiento, :perfil)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, apellido, cedula, email, estatura, peso, enfermedades, sangre, civil, dias_deporte, covid, dosis, cirugias, discapacidad, usuario, password, fecha_nacimiento, perfil, estado) VALUES (:nombre, :apellido, :cedula, :email, :estatura, :peso, :enfermedades, :sangre, :civil, :dias_deporte, :covid, :dosis, :cirugias, :discapacidad, :usuario, :password, :fecha_nacimiento, :perfil, :estado)");
 
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		$stmt->bindParam(":apellido", $datos["apellido"], PDO::PARAM_STR);
@@ -30,6 +30,7 @@ class ModeloClientesFitness{
 		$stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
 		$stmt->bindParam(":perfil", $datos["perfil"], PDO::PARAM_STR);
 		$stmt->bindParam(":fecha_nacimiento", $datos["fecha_nacimiento"], PDO::PARAM_STR);
+		$stmt->bindParam(":estado", $datos["estado"], PDO::PARAM_STR);
 
 		if($stmt->execute()){
 

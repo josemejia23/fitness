@@ -20,7 +20,6 @@
 			</li>';
 			}
 
-			
 
 			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial") {
 
@@ -35,7 +34,7 @@
 
 			</li>';
 			}
-			if ( $_SESSION["perfil"] == "Especial") {
+			if ($_SESSION["perfil"] == "Especial") {
 
 				echo '<li class="active">
 
@@ -55,7 +54,7 @@
 
 				<a href="usuarios">
 
-					<i class="fa fa-user"></i>
+					<i class="fa fa-users"></i>
 					<span>Usuarios</span>
 
 				</a>
@@ -130,23 +129,7 @@
 		</li>';
 			}
 
-			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor") {
-
-				echo '<li>
-
-				<a href="#">
-
-					<i class="fa fa-users"></i>
-					<span>Usuarios fitness</span>
-					<span class="pull-right-container">
-					
-						<i class="fa fa-angle-left pull-right"></i>
-
-					</span>
-				</a>
-
-			</li>';
-			}
+			
 
 			if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor") {
 
@@ -212,11 +195,11 @@
 
 				echo '<li class="treeview">
 
-			<a href="#">
+			<a href="calendario">
 
-				<i class="fa fa-apple"></i>
+				<i class="fa fa-calendar"></i>
 				
-				<span>Nutrición</span>
+				<span>Actividades</span>
 				
 				<span class="pull-right-container">
 				
@@ -230,44 +213,24 @@
 				
 				<li>
 
-					<a href="#">
+					<a href="calendario">
 						
 						<i class="fa fa-circle-o"></i>
-						<span>Admin. Nutrición </span>
+						<span>Actividades</span>
 
 					</a>
 
 				</li>
 
-				<li>
+				';
 
-					<a href="#">
-						
-						<i class="fa fa-circle-o"></i>
-						<span>Verificar Nutrición</span>
-
-					</a>
-
-				</li>';
-
-				if ($_SESSION["perfil"] == "Administrador") {
-
-					echo '<li>
-
-					<a href="#">
-						
-						<i class="fa fa-circle-o"></i>
-						<span>Reporte Nutrición</span>
-
-					</a>
-
-				</li>';
-				}
 
 
 
 				echo '</ul>
 
+
+				
 		</li>';
 				echo '</ul>
 

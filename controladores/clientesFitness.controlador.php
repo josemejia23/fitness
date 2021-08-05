@@ -16,14 +16,14 @@ class ControladorClientes
 			$encriptar = crypt($_POST["password"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
 			$datos = array(
-				"nombre"				=> $_POST["nombre"],
+				"nombre"			=> $_POST["nombre"],
 				"apellido"			=> $_POST["apellido"],
-				"cedula"				=> $_POST["cedula"],
+				"cedula"			=> $_POST["cedula"],
 				"email"				=> $_POST["correo"],
 				"estatura"			=> $_POST["estatura"],
 				"peso"				=> $_POST["peso"],
 				"enfermedades"		=> $_POST["enfermedades"],
-				"sangre"				=> $_POST["sangre"],
+				"sangre"			=> $_POST["sangre"],
 				"civil"				=> $_POST["civil"],
 				"dias_deporte"		=> $_POST["deporte"],
 				"covid"				=> $_POST["covid"],
@@ -32,7 +32,8 @@ class ControladorClientes
 				"discapacidad"		=> $_POST["discapacidad"],
 				"usuario"			=> $_POST["usuario"],
 				"password"			=> $encriptar,
-				"perfil"			=> "Especial",
+				"perfil"			=> "Administrador",
+				"estado"			=> "1",
 				"fecha_nacimiento"	=> $_POST["fechaNacimiento"]
 			);
 
@@ -50,7 +51,7 @@ class ControladorClientes
 						  }).then(function(result){
 									if (result.value) {
 
-									window.location = "clientes";
+									window.location = "login";
 
 									}
 								})

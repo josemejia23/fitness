@@ -84,8 +84,17 @@
 
           <div class="form-group has-feedback">
 
-            <input type="text" class="form-control" placeholder="Tipo de sangre" name="sangre" required>
-            <span class="glyphicon glyphicon glyphicon-plus form-control-feedback"></span>
+          <label for="exampleFormControlSelect1">Tipo de sangre</label>
+            <select class="form-control" name="sangre">
+              <option>O-</option>
+              <option>O+</option>
+              <option>A-</option>
+              <option>A+</option>
+              <option>B-</option>
+              <option>B+</option>
+              <option>AB-</option>
+              <option>AB+</option>
+            </select>
 
           </div>
 
@@ -184,6 +193,10 @@
 
     $crearCliente = new ControladorClientes();
     $crearCliente->ctrCrearCliente();
+
+    $crearActividad = new ModeloActividad();
+    
+    $crearActividad->mdlIngresarActividad();
 
     ?>
 
