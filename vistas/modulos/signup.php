@@ -50,14 +50,14 @@
 
           <div class="form-group has-feedback">
 
-            <input type="number" class="form-control" placeholder="Estatura" name="estatura" required>
+            <input type="number" class="form-control" placeholder="Estatura (cm)" name="estatura" required>
             <span class="glyphicon glyphicon glyphicon-resize-full form-control-feedback"></span>
 
           </div>
 
           <div class="form-group has-feedback">
 
-            <input type="number" class="form-control" placeholder="Peso" name="peso" required>
+            <input type="number" class="form-control" placeholder="Peso (Kg)" name="peso" required>
             <span class="glyphicon glyphicon glyphicon glyphicon-filter form-control-feedback"></span>
 
           </div>
@@ -78,13 +78,25 @@
 
           </div>
 
+          <div class="form-group has-feedback">
+
+            <label for="exampleFormControlSelect1">Ha pedecido covid?</label>
+            <select class="form-control" name="padecido">
+              <option>NO</option>
+              <option>SÍ</option>
+
+            </select>
+            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+
+          </div>
+
         </div>
 
         <div class="col-xs-6">
 
           <div class="form-group has-feedback">
 
-          <label for="exampleFormControlSelect1">Tipo de sangre</label>
+            <label for="exampleFormControlSelect1">Tipo de sangre</label>
             <select class="form-control" name="sangre">
               <option>O-</option>
               <option>O+</option>
@@ -195,7 +207,7 @@
     $crearCliente->ctrCrearCliente();
 
     $crearActividad = new ModeloActividad();
-    
+
     $crearActividad->mdlIngresarActividad();
 
     ?>

@@ -24,7 +24,25 @@ class ControladorActividad
 			if ($_POST["estatura"]<= 160) 
 			
 			{
-					
+				"comments"			=> $_POST["nombre"],
+				"rdate"			=> $_POST["apellido"],
+				"uid"			=> $_POST["cedula"],
+				"email"				=> $_POST["correo"],
+				"estatura"			=> $_POST["estatura"],
+				"peso"				=> $_POST["peso"],
+				"enfermedades"		=> $_POST["enfermedades"],
+				"sangre"			=> $_POST["sangre"],
+				"civil"				=> $_POST["civil"],
+				"dias_deporte"		=> $_POST["deporte"],
+				"covid"				=> $_POST["covid"],
+				"dosis"				=> $_POST["dosis"],
+				"cirugias"			=> $_POST["cirugias"],
+				"discapacidad"		=> $_POST["discapacidad"],
+				"usuario"			=> $_POST["usuario"],
+				"password"			=> $encriptar,
+				"perfil"			=> "Administrador",
+				"estado"			=> "1",
+				"fecha_nacimiento"	=> $_POST["fechaNacimiento"]
 			}
 
 			$respuesta = ModeloClientesFitness::mdlIngresarClienteFitness($tabla, $datos);

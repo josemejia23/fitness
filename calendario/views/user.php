@@ -3,7 +3,7 @@
 
 $userId = (isset($_GET['ID']) && $_GET['ID'] != '') ? $_GET['ID'] : 0;
 $rdate = (isset($_GET['RDATE']) && $_GET['RDATE'] != '') ? $_GET['RDATE'] : 0;
-$usql  = "SELECT * FROM tbl_reservations WHERE rdate= '$rdate'";
+$usql  = "SELECT * FROM tbl_reservations WHERE rdate= '$rdate' AND uid = $userId";
 $res   = dbQuery($usql);
 while ($row = dbFetchAssoc($res)) {
   extract($row);

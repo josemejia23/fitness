@@ -28,6 +28,7 @@ class ControladorClientesFitness{
 							   "discapacidad"		=>$_POST["discapacidad"],
 							   "usuario"			=>$_POST["usuario"],
 							   "contrasena"			=>$_POST["contrasena"],
+							   "padecido"			=>$_POST["padecido"],
 					           "fecha_nacimiento"	=>$_POST["fechaNacimiento"]);
 
 			   	$respuesta = ModeloClientes::mdlIngresarCliente($tabla, $datos);

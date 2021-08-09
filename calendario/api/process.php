@@ -147,7 +147,8 @@ function calendarView() {
 	$uid = $_SESSION['id'];
 	$sql	= "SELECT  u.id AS user_id, r.rdate, r.status, comments
 			   FROM usuarios u, tbl_reservations r 
-			   WHERE '.$uid.' = '.$uid.'  
+			   WHERE r.uid = $uid 
+			   AND u.id = $uid
 			   AND (r.rdate BETWEEN '$start' AND '$end')";
 	//AND r.status = 'APPROVED'
 	$result = dbQuery($sql);

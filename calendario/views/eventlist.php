@@ -74,7 +74,7 @@ $utype = '';
 
 <script language="javascript">
 function approve(userId, rdate) {
-	if(confirm('Estás seguro que quieres aprobar la actividad?')) {
+	if(confirm('Está seguro que quieres aprobar la actividad?')) {
 		window.location.href = '<?php echo WEB_ROOT; ?>api/process.php?cmd=regConfirm&action=approve&userId='+userId+'&rdate='+rdate;
 	}
 }

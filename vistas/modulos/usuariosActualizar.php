@@ -460,7 +460,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-list-ol"></i></span>
 
-                <input type="number" class="form-control input-lg" name="editarEstatura" placeholder="Escriba la nueva estatura">
+                <input type="number" class="form-control input-lg" name="editarEstatura" placeholder="Escriba la nueva estatura (cm)">
 
               </div>
 
@@ -474,7 +474,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
 
-                <input type="number" class="form-control input-lg" name="editarPeso" placeholder="Escriba el nuevo peso">
+                <input type="number" class="form-control input-lg" name="editarPeso" placeholder="Escriba el nuevo peso (Kg)">
 
 
 
