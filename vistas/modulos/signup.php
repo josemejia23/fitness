@@ -80,7 +80,7 @@
 
           <div class="form-group has-feedback">
 
-            <label for="exampleFormControlSelect1">Ha pedecido covid?</label>
+            <label for="exampleFormControlSelect1">Ha padecido covid?</label>
             <select class="form-control" name="padecido">
               <option>NO</option>
               <option>SÍ</option>
