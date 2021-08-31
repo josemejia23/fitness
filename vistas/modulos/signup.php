@@ -29,7 +29,7 @@
 
           <div class="form-group has-feedback">
 
-            <input type="number" class="form-control" placeholder="Cédula" name="cedula" required>
+            <input type="number" class="form-control" placeholder="Cédula" name="cedula" maxlength="10" required>
             <span class="glyphicon glyphicon glyphicon-list-alt form-control-feedback"></span>
 
           </div>
@@ -67,14 +67,13 @@
 
             <label for="exampleFormControlSelect1">Enfermedades</label>
             <select class="form-control" name="enfermedades">
-              <option>0</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+              <option>No</option>
+              <option>Cardíacas</option>
+              <option>Respiratorias</option>
+              <option>Hipertensión</option>
+
             </select>
-            <span class="glyphicon glyphicon glyphicon-resize-full form-control-feedback"></span>
+
 
           </div>
 
@@ -86,13 +85,8 @@
               <option>SÍ</option>
 
             </select>
-            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
 
           </div>
-
-        </div>
-
-        <div class="col-xs-6">
 
           <div class="form-group has-feedback">
 
@@ -109,6 +103,12 @@
             </select>
 
           </div>
+
+
+        </div>
+
+        <div class="col-xs-6">
+
 
           <div class="form-group has-feedback">
 
@@ -131,7 +131,7 @@
               <option>NO</option>
 
             </select>
-            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+
 
           </div>
 
@@ -150,7 +150,7 @@
               <option>NO</option>
 
             </select>
-            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+
 
           </div>
 
@@ -161,8 +161,18 @@
 
           </div>
 
+          <div class="form-group has-feedbak">
+
+            <label for="locDiscapacidad">Localización Discapacidad</label>
+            <select class="form-control" name="locDiscapacidad">
+            <option>No</option>
+              <option>Tren Superior</option>
+              <option>Tren inferior</option>
+
+            </select>
 
 
+          </div>
 
 
           <div class="form-group has-feedback">
